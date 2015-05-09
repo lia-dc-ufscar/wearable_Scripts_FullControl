@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/pi/scripts/controlRequests.py", line 55, in <module>
+    verifyNewClick()
+  File "/home/pi/scripts/controlRequests.py", line 36, in verifyNewClick
+    r = requests.post(url_get_new_clicks, data = json.dumps({'auth':auth}), headers=headers)
+  File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 99, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 49, in request
+    response = session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 461, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 573, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 415, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', gaierror(-5, 'No address associated with hostname'))

@@ -1,0 +1,17 @@
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(20, GPIO.IN, GPIO.PUD_UP)
+GPIO.setup(26, GPIO.OUT)
+GPIO.setwarnings(False)
+
+GPIO.wait_for_edge(20, GPIO.FALLING)
+GPIO.output(26, True)
+time.sleep(0.5)
+GPIO.output(26, False)
+	#if input_state == False:
+	#	print('Button pressed')
+	#	time.sleep(0.2)
+
